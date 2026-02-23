@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CodePen - A Pen by Zishan</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <nav class="navbar">
+
+  <div class="logo">CalcPro</div>
+
+  <div class="nav-right">
+
+    <span onclick="toggleDark()" class="mode-btn">🌙</span>
+
+  </div>
+
+</nav>
+<div class="container">
+  <h1>All In One Calculator</h1>
+
+  <div class="menu">
+    <button onclick="showCalc('basic')">Basic</button>
+    <button onclick="showCalc('percentage')">Percentage</button>
+    <button onclick="showCalc('si')">Simple Interest</button>
+  </div>
+
+  <!-- Basic Calculator -->
+  <div id="basic" class="calc">
+    <h2>Basic Calculator</h2>
+    <input type="number" id="num1" placeholder="First Number">
+    <input type="number" id="num2" placeholder="Second Number">
+    <button onclick="add()">Add</button>
+    <h3 id="basicResult"></h3>
+  </div>
+
+  <!-- Percentage Calculator -->
+  <div id="percentage" class="calc" style="display:none;">
+    <h2>Percentage Calculator</h2>
+    <input type="number" id="percent" placeholder="Percentage">
+    <input type="number" id="number" placeholder="Number">
+    <button onclick="calculatePercentage()">Calculate</button>
+    <h3 id="percentResult"></h3>
+  </div>
+
+  <!-- Simple Interest -->
+  <div id="si" class="calc" style="display:none;">
+    <h2>Simple Interest Calculator</h2>
+    <input type="number" id="p" placeholder="Principal">
+    <input type="number" id="r" placeholder="Rate">
+    <input type="number" id="t" placeholder="Time">
+    <button onclick="calculateSI()">Calculate</button>
+    <h3 id="siResult"></h3>
+  </div>
+</div>
+<button onclick="showCalc('bmi')">BMI</button>
+<div id="bmi" class="calc" style="display:none;">
+
+  <h2>BMI Calculator</h2>
+
+  <input type="number" id="weight" placeholder="Weight (kg)">
+
+  <input type="number" id="height" placeholder="Height (meter)">
+
+  <button onclick="calculateBMI()">Calculate</button>
+
+  <h3 id="bmiResult"></h3>
+
+</div>
+<button onclick="showCalc('ci')">Compound Interest</button>
+<div id="ci" class="calc" style="display:none;">
+  <h2>Compound Interest Calculator</h2>
+  <input type="number" id="cp" placeholder="Principal">
+  <input type="number" id="cr" placeholder="Rate (%)">
+  <input type="number" id="ct" placeholder="Time (years)">
+  <input type="number" id="cn" placeholder="Times per year">
+  <button onclick="calculateCI()">Calculate</button>
+  <h3 id="ciResult"></h3>
+</div>
+<button onclick="showCalc('age')">Age</button>
+<div id="age" class="calc" style="display:none;">
+
+  <h2>Age Calculator</h2>
+
+  <input type="date" id="dob">
+
+  <button onclick="calculateAge()">Calculate</button>
+
+  <h3 id="ageResult"></h3>
+
+</div>
+<div class="container">
+
+  <!-- Tumhare sab calculator sections yaha -->
+
+</div>
+<footer style="margin-top:30px; text-align:center; font-size:14px;">
+</footer>
+<div class="toggle" onclick="toggleDark()"> 🌙 </div>
+<div id="emiCalc" class="calculator" style="display:none;">
+
+  <h2>EMI Calculator</h2>
+
+  <input type="number" id="loanAmount" placeholder="Loan Amount">
+
+  <input type="number" id="interestRate" placeholder="Interest Rate (Annual %)">
+
+  <input type="number" id="loanTenure" placeholder="Tenure (Years)">
+
+  <button onclick="calculateEMI()">Calculate EMI</button>
+
+  <h3 id="emiResult"></h3>
+
+</div>
+<div id="ciCalc" class="calculator" style="display:none;">
+
+  <h2>Compound Interest Calculator</h2>
+
+  <input type="number" id="ciPrincipal" placeholder="Principal Amount (₹)">
+
+  <input type="number" id="ciRate" placeholder="Interest Rate (%)">
+
+  <input type="number" id="ciTime" placeholder="Time (Years)">
+
+  <input type="number" id="ciFreq" placeholder="Compounds per Year (n)">
+
+  <button onclick="calculateCI()">Calculate CI</button>
+
+  <h3 id="ciResult"></h3>
+
+</div>
+<footer style="text-align:center; margin-top:30px; font-size:14px;">
+  © 2026 CalcPro | Privacy Policy
+</footer>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
